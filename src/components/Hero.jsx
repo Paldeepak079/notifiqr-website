@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown, Star } from 'lucide-react'
 
@@ -115,7 +114,12 @@ const PhoneMockup = () => (
 
 const Hero = () => {
   const scrollToFeatures = () => {
-    document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })
+    const el = document.getElementById('features')
+    if (el) {
+      const navbarHeight = 80
+      const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight
+      window.scrollTo({ top, behavior: 'smooth' })
+    }
   }
 
   return (

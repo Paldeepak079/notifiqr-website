@@ -1,12 +1,31 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Bell, Mail } from 'lucide-react'
+
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.notifiqr'
+
+const scrollToSection = (id) => {
+  setTimeout(() => {
+    const el = document.getElementById(id)
+    if (el) {
+      const navbarHeight = 80
+      const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight
+      window.scrollTo({ top, behavior: 'smooth' })
+    }
+  }, 80)
+}
 
 const Footer = () => {
   const year = new Date().getFullYear()
+  const location = useLocation()
+  const navigate = useNavigate()
 
-  const scrollTo = (id) => {
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  const handleSectionClick = (id) => {
+    if (location.pathname === '/') {
+      scrollToSection(id)
+    } else {
+      navigate('/')
+      sessionStorage.setItem('scrollTo', id)
+    }
   }
 
   return (
@@ -66,13 +85,13 @@ const Footer = () => {
           <div className="footer-col">
             <div className="footer-col-title">Product</div>
             <ul className="footer-links">
-              <li><button onClick={() => scrollTo('features')} className="footer-link">Features</button></li>
-              <li><button onClick={() => scrollTo('screenshots')} className="footer-link">Screenshots</button></li>
-              <li><button onClick={() => scrollTo('pricing')} className="footer-link">Pricing</button></li>
-              <li><button onClick={() => scrollTo('how-it-works')} className="footer-link">How It Works</button></li>
+              <li><button onClick={() => handleSectionClick('features')} className="footer-link">Features</button></li>
+              <li><button onClick={() => handleSectionClick('screenshots')} className="footer-link">Screenshots</button></li>
+              <li><button onClick={() => handleSectionClick('pricing')} className="footer-link">Pricing</button></li>
+              <li><button onClick={() => handleSectionClick('how-it-works')} className="footer-link">How It Works</button></li>
               <li>
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.notifiqr"
+                  href={PLAY_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer-link"
@@ -87,8 +106,8 @@ const Footer = () => {
           <div className="footer-col">
             <div className="footer-col-title">Support</div>
             <ul className="footer-links">
-              <li><button onClick={() => scrollTo('faq')} className="footer-link">FAQ</button></li>
-              <li><button onClick={() => scrollTo('contact')} className="footer-link">Contact Us</button></li>
+              <li><button onClick={() => handleSectionClick('faq')} className="footer-link">FAQ</button></li>
+              <li><button onClick={() => handleSectionClick('contact')} className="footer-link">Contact Us</button></li>
               <li>
                 <a
                   href="mailto:notifiqr.app@gmail.com?subject=Bug Report — Notifiqr"

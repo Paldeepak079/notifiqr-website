@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Check, Zap, Crown, Infinity } from 'lucide-react'
+import { Check, Zap, Crown, Infinity as InfinityIcon } from 'lucide-react'
 import GlassCard from './GlassCard'
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.notifiqr'
@@ -51,7 +50,7 @@ const plans = [
   {
     id: 'lifetime',
     name: 'Lifetime',
-    icon: Infinity,
+    icon: InfinityIcon,
     price: '₹9,669',
     period: 'one-time',
     tagline: 'Pay once, own forever',

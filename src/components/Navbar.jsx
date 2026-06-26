@@ -1,22 +1,35 @@
-import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useState, useEffect, useCallback } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Bell } from 'lucide-react'
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.notifiqr'
 
 const navLinks = [
-  { label: 'Features', href: '/#features' },
-  { label: 'Screenshots', href: '/#screenshots' },
-  { label: 'Pricing', href: '/#pricing' },
-  { label: 'FAQ', href: '/#faq' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Features', sectionId: 'features' },
+  { label: 'Screenshots', sectionId: 'screenshots' },
+  { label: 'Pricing', sectionId: 'pricing' },
+  { label: 'FAQ', sectionId: 'faq' },
+  { label: 'Contact', sectionId: 'contact' },
 ]
+
+const scrollToSection = (id) => {
+  // Small timeout gives the DOM time to render after route change
+  setTimeout(() => {
+    const el = document.getElementById(id)
+    if (el) {
+      const navbarHeight = 80
+      const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight
+      window.scrollTo({ top, behavior: 'smooth' })
+    }
+  }, 80)
+}
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30)
@@ -24,20 +37,25 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Close mobile menu on route change
   useEffect(() => {
     setMenuOpen(false)
-  }, [location])
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [location.pathname])
 
-  const handleNavClick = (href) => {
+  const handleNavClick = useCallback((sectionId) => {
     setMenuOpen(false)
-    if (href.startsWith('/#')) {
-      const id = href.slice(2)
-      const el = document.getElementById(id)
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' })
-      }
+    const isHome = location.pathname === '/'
+    if (isHome) {
+      // Already on home — just scroll
+      scrollToSection(sectionId)
+    } else {
+      // Navigate to home, then scroll after render
+      navigate('/')
+      // Store intended scroll target so Home can pick it up
+      sessionStorage.setItem('scrollTo', sectionId)
     }
-  }
+  }, [location.pathname, navigate])
 
   return (
     <>
@@ -60,18 +78,12 @@ const Navbar = () => {
           <ul className="navbar-links">
             {navLinks.map((link) => (
               <li key={link.label}>
-                <a
-                  href={link.href}
+                <button
                   className="navbar-link"
-                  onClick={(e) => {
-                    if (link.href.startsWith('/#')) {
-                      e.preventDefault()
-                      handleNavClick(link.href)
-                    }
-                  }}
+                  onClick={() => handleNavClick(link.sectionId)}
                 >
                   {link.label}
-                </a>
+                </button>
               </li>
             ))}
           </ul>
@@ -115,18 +127,12 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
                 >
-                  <a
-                    href={link.href}
+                  <button
                     className="mobile-menu-link"
-                    onClick={(e) => {
-                      if (link.href.startsWith('/#')) {
-                        e.preventDefault()
-                        handleNavClick(link.href)
-                      }
-                    }}
+                    onClick={() => handleNavClick(link.sectionId)}
                   >
                     {link.label}
-                  </a>
+                  </button>
                 </motion.li>
               ))}
               <motion.li
@@ -219,6 +225,9 @@ const Navbar = () => {
           transition: all 0.2s ease;
           text-decoration: none;
           cursor: pointer;
+          background: none;
+          border: none;
+          font-family: inherit;
         }
         .navbar-link:hover {
           color: white;
@@ -269,6 +278,8 @@ const Navbar = () => {
         }
         .mobile-menu-link {
           display: block;
+          width: 100%;
+          text-align: left;
           padding: 12px 16px;
           border-radius: 12px;
           color: rgba(255,255,255,0.8);
@@ -276,6 +287,10 @@ const Navbar = () => {
           font-weight: 500;
           transition: all 0.2s ease;
           text-decoration: none;
+          cursor: pointer;
+          background: none;
+          border: none;
+          font-family: inherit;
         }
         .mobile-menu-link:hover {
           background: rgba(255,255,255,0.07);

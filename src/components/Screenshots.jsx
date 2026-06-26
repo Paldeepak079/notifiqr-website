@@ -47,7 +47,6 @@ const PhoneFrame = ({ img, active }) => (
 
 const Screenshots = () => {
   const [active, setActive] = useState(0)
-  const [dragging, setDragging] = useState(false)
   const intervalRef = useRef(null)
 
   const startAuto = () => {

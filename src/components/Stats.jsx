@@ -1,7 +1,8 @@
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import CountUp from 'react-countup'
+import { motion } from 'framer-motion'
+import CountUpModule from 'react-countup'
 import { useInView as useRIOView } from 'react-intersection-observer'
+
+const CountUp = typeof CountUpModule === 'function' ? CountUpModule : (CountUpModule.default || CountUpModule)
 
 const stats = [
   { value: 10000, suffix: '+', label: 'Active Users', icon: '👥' },
