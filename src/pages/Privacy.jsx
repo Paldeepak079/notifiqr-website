@@ -43,16 +43,10 @@ const Privacy = () => {
                   The on-device AI classifier runs using only your phone's processor and memory. This is the default behavior and cannot be overridden without your explicit consent.
                 </p>
 
-                <h3>☁️ Premium Cloud Sync (Opt-In Only)</h3>
+                <h3>🔒 100% Serverless & Offline</h3>
                 <p>
-                  Users with a Premium subscription may optionally enable Cloud Synchronization. When activated, encrypted notifications are securely backed up to your personal Firebase cloud database instance to synchronize data across your personal devices only.
+                  Notifiqr is designed to be a strictly offline, serverless application. We do not run or maintain any cloud databases or synchronization servers. All your notification history, action items, smart folder configurations, and custom preferences remain stored entirely and securely on your local device.
                 </p>
-                <ul>
-                  <li>Cloud sync is <strong>disabled by default</strong>.</li>
-                  <li>No data is synced unless you explicitly enable the sync toggle in Settings.</li>
-                  <li>All synced data is encrypted in transit (TLS 1.3) and at rest (AES-256).</li>
-                  <li>Your cloud data belongs only to you and is accessible only by you.</li>
-                </ul>
 
                 <h3>🚫 No Third-Party Sharing</h3>
                 <p>
@@ -98,8 +92,7 @@ const Privacy = () => {
                   You retain complete control over your data at all times:
                 </p>
                 <ul>
-                  <li>You can wipe all locally stored notification history from Settings → Data → Clear All Data.</li>
-                  <li>If cloud sync is enabled, you can delete all cloud data from Settings → Cloud → Delete Cloud Data.</li>
+                  <li>You can wipe all locally stored notification history from Settings → Privacy & Data → Wipe All Data.</li>
                   <li>Uninstalling the app automatically removes all local data.</li>
                   <li>We do not retain any data after you delete the app or clear your data.</li>
                 </ul>

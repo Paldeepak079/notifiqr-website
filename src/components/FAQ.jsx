@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: 'What does the "Privacy-First" design actually mean?',
-    a: 'It means the app was architectured from day one to never need a server. Unlike competing apps that send your notifications to their cloud for AI processing, Notifiqr runs a local on-device classifier. The only optional cloud feature is Premium cloud sync (between your own devices, encrypted), which is disabled by default and requires you to explicitly turn it on.',
+    a: 'It means the app was architectured from day one to never need a server. Unlike competing apps that send your notifications to their cloud for AI processing, Notifiqr runs a local on-device classifier. All filtering, ranking, and storage happen completely offline on your device, ensuring maximum privacy.',
   },
   {
     q: 'How is the AI classification different from Android\'s built-in priority?',
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'What\'s included in the free tier?',
-    a: 'The free tier includes core notification filtering (Urgent/High/Medium/Low/Spam), basic Smart Folders, 30-notification history, and the basic Priority Dashboard. You get the full core experience at no cost. Premium adds cloud sync, advanced AI, seasonal themes, longer history, and priority support.',
+    a: 'The free tier includes core notification filtering (Urgent/High/Medium/Low/Spam), basic Smart Folders, 30-notification history, and the basic Priority Dashboard. You get the full core experience at no cost. Premium adds advanced AI features, customizable themes, unlimited folders, longer history, and priority support.',
   },
   {
     q: 'Can I cancel my subscription anytime?',

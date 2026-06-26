@@ -37,7 +37,7 @@ const plans = [
     badge: '🔥 Most Popular',
     features: [
       'Everything in Monthly',
-      'Cloud sync across devices',
+      'Unlimited Smart Folders',
       'Advanced AI sorting',
       'Seasonal themes (4/year)',
       'Priority customer support',

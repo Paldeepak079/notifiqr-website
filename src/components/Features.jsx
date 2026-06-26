@@ -57,7 +57,7 @@ const features = [
   {
     icon: Zap,
     title: 'Premium Benefits',
-    desc: 'Cloud sync across devices, advanced AI sorting, seasonal themes, priority support and early feature access.',
+    desc: 'Unlimited smart folders, advanced AI sorting, seasonal themes, priority support and early feature access.',
     badge: 'Premium ✨',
   },
 ]
