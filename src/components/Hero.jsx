@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ChevronDown, Star } from 'lucide-react'
+import { ChevronDown, Star, Sparkles } from 'lucide-react'
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.notifiqr'
 
@@ -145,7 +145,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              <span>🤖</span>
+              <Sparkles size={14} style={{ color: 'rgba(255,255,255,0.8)' }} />
               <span>AI-Powered Notification Intelligence</span>
               <div className="hero-badge-dot" />
             </motion.div>

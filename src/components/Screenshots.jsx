@@ -12,19 +12,19 @@ const slides = [
     img: dashboardImg,
     title: 'Prioritized Dashboard',
     desc: 'Every notification ranked by urgency. Urgent at the top, spam auto-filtered.',
-    tag: '🔔 Dashboard',
+    tag: 'Dashboard',
   },
   {
     img: foldersImg,
     title: 'Smart Folders',
     desc: 'Notifications auto-sorted into Work, Finance, Social, Health and more.',
-    tag: '📁 Folders',
+    tag: 'Folders',
   },
   {
     img: privacyImg,
     title: 'Privacy Health Score',
     desc: 'Weekly report showing exactly how much spam you blocked and time saved.',
-    tag: '🛡️ Privacy',
+    tag: 'Privacy',
   },
 ]
 

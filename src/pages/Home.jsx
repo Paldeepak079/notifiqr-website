@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import Hero from '../components/Hero'
-import Stats from '../components/Stats'
 import Features from '../components/Features'
 import Screenshots from '../components/Screenshots'
 import HowItWorks from '../components/HowItWorks'
@@ -31,7 +30,6 @@ const Home = () => {
   return (
     <main>
       <Hero />
-      <Stats />
       <Features />
       <Screenshots />
       <HowItWorks />

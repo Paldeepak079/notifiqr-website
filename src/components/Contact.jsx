@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Bug, Send } from 'lucide-react'
+import { Mail, Bug, Send, CheckCircle2 } from 'lucide-react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
@@ -121,7 +121,9 @@ const Contact = () => {
             <div className="glass-card contact-form-card">
               {submitted ? (
                 <div className="contact-success">
-                  <div className="contact-success-icon">✅</div>
+                  <div className="contact-success-icon">
+                    <CheckCircle2 size={32} style={{ color: '#4ade80', margin: '0 auto' }} />
+                  </div>
                   <h3>Message sent!</h3>
                   <p>We'll get back to you within 24 hours at {formData.email}</p>
                   <button
