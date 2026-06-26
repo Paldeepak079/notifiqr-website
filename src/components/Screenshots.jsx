@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
-// Import the generated screenshots
-import dashboardImg from '/screenshots/screenshot_dashboard.png'
-import foldersImg from '/screenshots/screenshot_folders.png'
-import privacyImg from '/screenshots/screenshot_privacy.png'
+// Reference the generated screenshots from the public folder
+const dashboardImg = '/screenshots/screenshot_dashboard.png'
+const foldersImg = '/screenshots/screenshot_folders.png'
+const privacyImg = '/screenshots/screenshot_privacy.png'
 
 const slides = [
   {
