@@ -228,6 +228,7 @@ const Hero = () => {
               {[
                 { label: '100% On-Device', icon: '🔒' },
                 { label: 'AES-256 Encrypted', icon: '🛡️' },
+                { label: 'Auto-Clean', icon: '🧹' },
                 { label: 'No Ads Ever', icon: '✨' },
               ].map((stat) => (
                 <div key={stat.label} className="hero-stat-pill">

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import GlassCard from './GlassCard'
 import {
   Filter, Sparkles, Lock, Folder, Bell, Calendar,
-  BarChart2, Layers, Zap
+  BarChart2, Layers, Trash2, Zap, Vibrate
 } from 'lucide-react'
 
 const features = [
@@ -45,14 +45,20 @@ const features = [
   {
     icon: Bell,
     title: 'Home Screen Widget',
-    desc: 'Glance-powered widget shows today\'s urgent actions at a glance — without opening the app.',
+    desc: 'AI-scored widget shows your most important notifications ranked by urgency, with smart fallback content when things are quiet.',
     badge: 'Widget',
   },
   {
-    icon: Layers,
-    title: 'Encrypted Database',
-    desc: 'SQLCipher + AES-256-GCM field-level encryption protects every single byte of your notification history.',
-    badge: 'Security',
+    icon: Trash2,
+    title: 'Auto-Clean Notifications',
+    desc: 'Automatically removes notifications from your system tray seconds after they arrive — kept safe inside Notifiqr. No clutter, no spam in your panel.',
+    badge: 'Tidy',
+  },
+  {
+    icon: Vibrate,
+    title: 'Haptic & Sound Feedback',
+    desc: 'Custom vibration patterns and priority-specific notification tones — feel the urgency without looking at your phone.',
+    badge: 'Feedback',
   },
   {
     icon: Zap,

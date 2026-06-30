@@ -21,7 +21,7 @@ const Privacy = () => {
             <div className="legal-icon"><Shield size={24} /></div>
             <div className="section-label">Legal Document</div>
             <h1>Privacy Policy</h1>
-            <p className="legal-date">Last updated: June 13, 2026</p>
+            <p className="legal-date">Last updated: June 29, 2026</p>
           </div>
 
           <div className="glass-card legal-card">
@@ -92,7 +92,8 @@ const Privacy = () => {
                   You retain complete control over your data at all times:
                 </p>
                 <ul>
-                  <li>You can wipe all locally stored notification history from Settings → Privacy & Data → Wipe All Data.</li>
+                  <li>Choose from 1 day, 7 days, 30 days, or forever retention periods for your notification history (capped at 2,000 items).</li>
+                  <li>You can wipe all locally stored notification history from Settings → Wipe All Data at any time.</li>
                   <li>Uninstalling the app automatically removes all local data.</li>
                   <li>We do not retain any data after you delete the app or clear your data.</li>
                 </ul>

@@ -48,7 +48,7 @@ const Contact = () => {
               <div className="contact-info-inner">
                 <h3 className="contact-info-title">Let's talk</h3>
                 <p className="contact-info-desc">
-                  We're Deepak from Notifiqr. We read every single message and respond within 24 hours.
+                  We read every single message and respond within 24 hours.
                 </p>
 
                 {/* Contact links */}
@@ -144,7 +144,7 @@ const Contact = () => {
                         name="name"
                         type="text"
                         className="glass-input"
-                        placeholder="Deepak"
+                        placeholder="Your Name"
                         value={formData.name}
                         onChange={handleChange}
                         required
@@ -157,7 +157,7 @@ const Contact = () => {
                         name="email"
                         type="email"
                         className="glass-input"
-                        placeholder="paldeepak079@gmail.com"
+                        placeholder="you@email.com"
                         value={formData.email}
                         onChange={handleChange}
                         required

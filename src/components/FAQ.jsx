@@ -35,6 +35,18 @@ const faqs = [
     q: 'What Android version is required?',
     a: 'Notifiqr requires Android 12 (API level 31) or higher. This is because we use modern security APIs including Android KeyStore, the latest WorkManager features, and Jetpack Compose for the UI. Android 12+ covers the vast majority of currently active Android devices.',
   },
+  {
+    q: 'What is Auto-Clean? Does it delete my notifications permanently?',
+    a: 'Auto-Clean automatically removes notifications from your system notification panel 5 seconds after they arrive. Your notifications are NOT deleted — they remain safely stored inside the Notifiqr app with all their history, priority labels, and action items. Auto-Clean simply keeps your phone\'s notification panel tidy while Notifiqr maintains the full record.',
+  },
+  {
+    q: 'Does Notifiqr have notification sounds and vibration?',
+    a: 'Yes! Notifiqr plays distinct notification tones (low, medium, urgent) based on the priority level of each notification. Haptic feedback also varies by priority — urgent notifications get a strong pulse, while spam gets a subtle tap. Both sound and haptics can be toggled independently in Settings.',
+  },
+  {
+    q: 'What is Data Retention and how does it work?',
+    a: 'Data Retention lets you control how long notifications stay in Notifiqr\'s history. You can choose 1 day, 7 days, 30 days, or keep them forever (capped at 2,000 items). When retention kicks in, older notifications are automatically removed — but you never lose more than the selected window. Change it anytime in Settings.',
+  },
 ]
 
 const FAQItem = ({ faq, index }) => {
