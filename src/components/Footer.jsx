@@ -59,7 +59,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://instagram.com/notifiqr"
+                href="https://www.instagram.com/notifiqr.app?igsh=ZzIxZno5anV2NmVy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social"
