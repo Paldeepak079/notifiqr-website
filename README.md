@@ -1,5 +1,6 @@
 # notifiqr-website
-![Uploading image.png…]()
+
+<img width="1774" height="887" alt="notifiqrbanner" src="https://github.com/user-attachments/assets/8ad2f9c6-39a1-49c2-b6ac-5a540afc5b31" />
 
 https://notifiqr.netlify.app/
 
@@ -54,16 +55,6 @@ Notifiqr quietly monitors your selected apps in the background and instantly sur
 
 ---
 
-# 📱 Screenshots
-
-<p align="center">
-<img src="./assets/home.png" width="230">
-<img src="./assets/history.png" width="230">
-<img src="./assets/settings.png" width="230">
-</p>
-
----
-
 # 🛡 Privacy First
 
 Your notifications belong to you.
@@ -86,20 +77,6 @@ Your notifications belong to you.
 - Notification Listener Service
 - Firebase (Optional Sync)
 - Google Play Billing
-
----
-
-# 📈 Roadmap
-
-- [x] Notification History
-- [x] Smart Categories
-- [x] Direct Reply
-- [x] Update Me
-- [ ] AI Action Extraction
-- [ ] Deadline Detection
-- [ ] Smart Summaries
-- [ ] Cross-device Sync
-
 ---
 
 # 🤝 Contributing
