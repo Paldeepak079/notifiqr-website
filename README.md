@@ -5,7 +5,7 @@
 https://notifiqr.netlify.app/
 
 <p align="center">
-  <img src="./assets/banner.png" alt="Notifiqr Banner" width="100%">
+ 
 </p>
 
 <h1 align="center">Notifiqr</h1>
