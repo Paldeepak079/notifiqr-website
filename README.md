@@ -62,7 +62,6 @@ Your notifications belong to you.
 - Processing happens locally
 - No ads
 - No selling user data
-- Cloud Sync is optional
 - You control every permission
 
 ---
