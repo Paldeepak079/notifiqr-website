@@ -2,7 +2,7 @@
 
 <img width="1774" height="887" alt="notifiqrbanner" src="https://github.com/user-attachments/assets/8ad2f9c6-39a1-49c2-b6ac-5a540afc5b31" />
 
-https://notifiqr.netlify.app/
+<h1 align="center"> https://notifiqr.netlify.app/ </h1>
 
 <p align="center">
  
