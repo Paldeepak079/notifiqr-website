@@ -11,19 +11,19 @@ const slides = [
   {
     img: importantImg,
     title: 'Important – What Matters Most',
-    desc: 'See only urgent notifications that need your attention right now – deadlines, payments, meeting reminders, and critical alerts.',
+    desc: 'See only urgent notifications – deadlines, payments, meetings, and critical alerts.',
     tag: 'Important',
   },
   {
     img: allhistoryImg,
     title: 'All History – Complete Overview',
-    desc: 'View every notification in one place. Filter by apps, folders, or toggle spam visibility. Never miss a thing.',
+    desc: 'View every notification in one place. Filter by apps, folders, or toggle spam visibility.',
     tag: 'All History',
   },
   {
     img: updatemeImg,
     title: 'Update Me – Smart Summary',
-    desc: 'Get a natural, conversational summary of what\'s happening across all your apps. No more scrolling through hundreds of messages.',
+    desc: 'Get a natural summary of what\'s happening across all your apps. No more scrolling through hundreds of messages.',
     tag: 'Update Me',
   },
   {
