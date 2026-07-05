@@ -2,29 +2,35 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
-// Reference the generated screenshots from the public folder
-const dashboardImg = '/screenshots/screenshot_dashboard.png'
-const foldersImg = '/screenshots/screenshot_folders.png'
-const privacyImg = '/screenshots/screenshot_privacy.png'
+const importantImg = '/screenshots/screenshot_important.png'
+const allhistoryImg = '/screenshots/screenshot_allhistory.png'
+const updatemeImg = '/screenshots/screenshot_updateme.png'
+const settingsImg = '/screenshots/screenshot_settings.png'
 
 const slides = [
   {
-    img: dashboardImg,
-    title: 'Prioritized Dashboard',
-    desc: 'Every notification ranked by urgency. Urgent at the top, spam auto-filtered.',
-    tag: 'Dashboard',
+    img: importantImg,
+    title: 'Important – What Matters Most',
+    desc: 'See only urgent notifications that need your attention right now – deadlines, payments, meeting reminders, and critical alerts.',
+    tag: 'Important',
   },
   {
-    img: foldersImg,
-    title: 'Smart Folders',
-    desc: 'Notifications auto-sorted into Work, Finance, Social, Health and more.',
-    tag: 'Folders',
+    img: allhistoryImg,
+    title: 'All History – Complete Overview',
+    desc: 'View every notification in one place. Filter by apps, folders, or toggle spam visibility. Never miss a thing.',
+    tag: 'All History',
   },
   {
-    img: privacyImg,
-    title: 'Privacy Health Score',
-    desc: 'Weekly report showing exactly how much spam you blocked and time saved.',
-    tag: 'Privacy',
+    img: updatemeImg,
+    title: 'Update Me – Smart Summary',
+    desc: 'Get a natural, conversational summary of what\'s happening across all your apps. No more scrolling through hundreds of messages.',
+    tag: 'Update Me',
+  },
+  {
+    img: settingsImg,
+    title: 'Settings – Full Control',
+    desc: 'Customize your experience – toggle haptics, sounds, auto-clean, crash reporting, data retention, and manage monitored apps.',
+    tag: 'Settings',
   },
 ]
 

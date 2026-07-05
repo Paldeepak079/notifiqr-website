@@ -3,90 +3,7 @@ import { Star } from 'lucide-react'
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.notifiqr'
 
-// QR code SVG placeholder (a clean placeholder QR-style pattern)
-const QRCode = () => (
-  <div className="qr-code-wrap">
-    <svg viewBox="0 0 200 200" className="qr-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Outer frame */}
-      <rect width="200" height="200" rx="12" fill="black" />
 
-      {/* Corner squares */}
-      <g fill="white">
-        {/* Top-left */}
-        <rect x="16" y="16" width="52" height="52" rx="8" />
-        <rect x="22" y="22" width="40" height="40" rx="5" fill="black" />
-        <rect x="30" y="30" width="24" height="24" rx="3" />
-
-        {/* Top-right */}
-        <rect x="132" y="16" width="52" height="52" rx="8" />
-        <rect x="138" y="22" width="40" height="40" rx="5" fill="black" />
-        <rect x="146" y="30" width="24" height="24" rx="3" />
-
-        {/* Bottom-left */}
-        <rect x="16" y="132" width="52" height="52" rx="8" />
-        <rect x="22" y="138" width="40" height="40" rx="5" fill="black" />
-        <rect x="30" y="146" width="24" height="24" rx="3" />
-      </g>
-
-      {/* Data pattern - simplified */}
-      <g fill="rgba(255,255,255,0.9)">
-        <rect x="84" y="16" width="8" height="8" rx="2" />
-        <rect x="96" y="16" width="8" height="8" rx="2" />
-        <rect x="108" y="16" width="8" height="8" rx="2" />
-        <rect x="84" y="28" width="8" height="8" rx="2" />
-        <rect x="108" y="28" width="8" height="8" rx="2" />
-        <rect x="84" y="40" width="20" height="8" rx="2" />
-        <rect x="84" y="52" width="8" height="8" rx="2" />
-        <rect x="96" y="52" width="20" height="8" rx="2" />
-
-        <rect x="16" y="84" width="8" height="8" rx="2" />
-        <rect x="28" y="84" width="8" height="8" rx="2" />
-        <rect x="16" y="96" width="20" height="8" rx="2" />
-        <rect x="16" y="108" width="8" height="8" rx="2" />
-        <rect x="28" y="108" width="8" height="8" rx="2" />
-        <rect x="40" y="84" width="8" height="8" rx="2" />
-        <rect x="40" y="96" width="8" height="8" rx="2" />
-        <rect x="40" y="108" width="8" height="8" rx="2" />
-
-        {/* Center area */}
-        <rect x="84" y="84" width="32" height="8" rx="2" />
-        <rect x="84" y="96" width="8" height="8" rx="2" />
-        <rect x="108" y="96" width="8" height="8" rx="2" />
-        <rect x="84" y="108" width="32" height="8" rx="2" />
-        <rect x="96" y="120" width="8" height="8" rx="2" />
-        <rect x="108" y="108" width="8" height="20" rx="2" />
-        <rect x="120" y="84" width="8" height="32" rx="2" />
-        <rect x="132" y="84" width="8" height="8" rx="2" />
-        <rect x="144" y="84" width="8" height="8" rx="2" />
-        <rect x="156" y="84" width="8" height="8" rx="2" />
-        <rect x="132" y="96" width="32" height="8" rx="2" />
-        <rect x="132" y="108" width="8" height="8" rx="2" />
-        <rect x="148" y="108" width="16" height="8" rx="2" />
-
-        <rect x="16" y="132" width="52" height="8" rx="2" opacity="0" />
-        <rect x="84" y="132" width="8" height="8" rx="2" />
-        <rect x="96" y="132" width="20" height="8" rx="2" />
-        <rect x="84" y="144" width="20" height="8" rx="2" />
-        <rect x="108" y="144" width="8" height="8" rx="2" />
-        <rect x="84" y="156" width="8" height="8" rx="2" />
-        <rect x="96" y="156" width="8" height="8" rx="2" />
-        <rect x="108" y="156" width="8" height="8" rx="2" />
-        <rect x="120" y="132" width="8" height="8" rx="2" />
-        <rect x="132" y="132" width="32" height="8" rx="2" />
-        <rect x="144" y="144" width="20" height="8" rx="2" />
-        <rect x="120" y="144" width="8" height="20" rx="2" />
-        <rect x="132" y="156" width="32" height="8" rx="2" />
-        <rect x="156" y="144" width="8" height="20" rx="2" />
-      </g>
-
-      {/* Center logo */}
-      <rect x="86" y="86" width="28" height="28" rx="6" fill="white" />
-      <text x="100" y="105" textAnchor="middle" fill="black" fontSize="14" fontWeight="bold" fontFamily="Space Grotesk">N</text>
-    </svg>
-
-    <p className="qr-label">Scan to download</p>
-  </div>
-)
 
 const DownloadCTA = () => {
   return (
@@ -152,10 +69,7 @@ const DownloadCTA = () => {
               </div>
             </div>
 
-            {/* Right: QR + visual */}
-            <div className="download-right">
-              <QRCode />
-            </div>
+
           </div>
         </motion.div>
       </div>
@@ -198,10 +112,8 @@ const DownloadCTA = () => {
 
         .download-inner {
           padding: 60px;
-          display: grid;
-          grid-template-columns: 1fr auto;
-          gap: 80px;
-          align-items: center;
+          display: flex;
+          justify-content: center;
           position: relative;
           z-index: 1;
         }
@@ -210,6 +122,8 @@ const DownloadCTA = () => {
           display: flex;
           flex-direction: column;
           gap: 20px;
+          align-items: center;
+          text-align: center;
         }
 
         .download-title {
@@ -226,7 +140,7 @@ const DownloadCTA = () => {
           color: rgba(255,255,255,0.5);
           line-height: 1.65;
           margin: 0;
-          max-width: 440px;
+          max-width: 500px;
         }
 
         .download-rating {
@@ -269,43 +183,10 @@ const DownloadCTA = () => {
           font-size: 0.75rem;
         }
 
-        /* QR */
-        .download-right {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .qr-code-wrap {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 12px;
-        }
-
-        .qr-svg {
-          width: 160px;
-          height: 160px;
-          border-radius: 16px;
-          border: 1px solid rgba(255,255,255,0.15);
-          box-shadow: 0 0 40px rgba(255,255,255,0.06), 0 20px 60px rgba(0,0,0,0.5);
-        }
-
-        .qr-label {
-          font-size: 0.75rem;
-          color: rgba(255,255,255,0.3);
-          text-align: center;
-          margin: 0;
-        }
-
         @media (max-width: 768px) {
           .download-inner {
-            grid-template-columns: 1fr;
             padding: 40px 28px;
-            gap: 40px;
           }
-          .download-right { order: -1; }
-          .qr-svg { width: 120px; height: 120px; }
         }
       `}</style>
     </section>
