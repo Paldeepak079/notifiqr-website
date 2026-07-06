@@ -85,7 +85,7 @@ const Screenshots = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="section-label">📱 App Screenshots</div>
+          <div className="section-label">App Screenshots</div>
           <h2>See it in action</h2>
           <p>Clean, intuitive, and designed to help you focus on what truly matters.</p>
         </motion.div>

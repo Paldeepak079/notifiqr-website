@@ -3,9 +3,7 @@ import Hero from '../components/Hero'
 import Features from '../components/Features'
 import Screenshots from '../components/Screenshots'
 import HowItWorks from '../components/HowItWorks'
-import Pricing from '../components/Pricing'
-import Testimonials from '../components/Testimonials'
-import DownloadCTA from '../components/DownloadCTA'
+
 import FAQ from '../components/FAQ'
 import Contact from '../components/Contact'
 
@@ -33,9 +31,6 @@ const Home = () => {
       <Features />
       <Screenshots />
       <HowItWorks />
-      <Pricing />
-      <Testimonials />
-      <DownloadCTA />
       <FAQ />
       <Contact />
     </main>

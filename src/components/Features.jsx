@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import GlassCard from './GlassCard'
 import {
   Filter, Sparkles, Lock, Folder, Bell, Calendar,
-  BarChart2, Layers, Trash2, Zap, Vibrate
+  Layers, Trash2, Vibrate
 } from 'lucide-react'
 
 const features = [
@@ -28,19 +28,13 @@ const features = [
     icon: Folder,
     title: 'Smart Folders',
     desc: 'Auto-organized into Work, Finance, Shopping, Social, Health & Promos. Find any notification instantly.',
-    badge: 'Organization',
+    badge: 'Auto-sorted',
   },
   {
     icon: Calendar,
     title: 'Action Extraction',
     desc: 'Automatically detects tasks and deadlines from your notifications and adds them to your calendar with one tap.',
     badge: 'Automation',
-  },
-  {
-    icon: BarChart2,
-    title: 'Privacy Health Score',
-    desc: 'Weekly reports showing how many distractions you blocked, time saved, and your overall notification hygiene score.',
-    badge: 'Insights',
   },
   {
     icon: Bell,
@@ -60,12 +54,6 @@ const features = [
     desc: 'Custom vibration patterns and priority-specific notification tones — feel the urgency without looking at your phone.',
     badge: 'Feedback',
   },
-  {
-    icon: Zap,
-    title: 'Premium Benefits',
-    desc: 'Unlimited smart folders, advanced AI sorting, seasonal themes, priority support and early feature access.',
-    badge: 'Premium ✨',
-  },
 ]
 
 const FeatureCard = ({ feature, index }) => {
@@ -83,9 +71,13 @@ const FeatureCard = ({ feature, index }) => {
           <div className="feature-icon-wrap">
             <Icon size={22} strokeWidth={1.5} />
           </div>
-          <div className="feature-badge">{feature.badge}</div>
-          <h3 className="feature-title">{feature.title}</h3>
-          <p className="feature-desc">{feature.desc}</p>
+          <div className="feature-content">
+            <div className="feature-header">
+              <h3 className="feature-title">{feature.title}</h3>
+              <div className="feature-badge">{feature.badge}</div>
+            </div>
+            <p className="feature-desc">{feature.desc}</p>
+          </div>
         </div>
       </GlassCard>
     </motion.div>
@@ -103,7 +95,7 @@ const Features = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="section-label">⚡ Core Features</div>
+          <div className="section-label">Core Features</div>
           <h2>Everything you need to<br />reclaim your attention</h2>
           <p>Built for people who want to be in control of their digital life, not controlled by it.</p>
         </motion.div>
@@ -131,8 +123,7 @@ const Features = () => {
         }
         .feature-card-inner {
           display: flex;
-          flex-direction: column;
-          gap: 12px;
+          gap: 16px;
           position: relative;
           z-index: 1;
         }
@@ -143,10 +134,20 @@ const Features = () => {
           background: rgba(255,255,255,0.06);
           border: 1px solid rgba(255,255,255,0.1);
           display: flex;
+          flex-shrink: 0;
           align-items: center;
           justify-content: center;
           color: rgba(255,255,255,0.8);
-          margin-bottom: 4px;
+        }
+        .feature-content {
+          flex: 1;
+          min-width: 0;
+        }
+        .feature-header {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 8px;
         }
         .feature-badge {
           display: inline-flex;
@@ -154,11 +155,11 @@ const Features = () => {
           background: rgba(255,255,255,0.06);
           border: 1px solid rgba(255,255,255,0.1);
           border-radius: 100px;
-          font-size: 0.7rem;
+          font-size: 0.65rem;
           font-weight: 600;
-          color: rgba(255,255,255,0.5);
+          color: rgba(255,255,255,0.45);
           letter-spacing: 0.05em;
-          width: fit-content;
+          white-space: nowrap;
         }
         .feature-title {
           font-size: 1.1rem;

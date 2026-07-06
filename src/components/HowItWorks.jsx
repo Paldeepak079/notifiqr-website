@@ -46,7 +46,7 @@ const HowItWorks = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="section-label">🚀 How It Works</div>
+          <div className="section-label">How It Works</div>
           <h2>Up and running in minutes</h2>
           <p>Four simple steps to transform your notification experience forever.</p>
         </motion.div>
@@ -63,34 +63,20 @@ const HowItWorks = () => {
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ delay: i * 0.15, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
-                {/* Connector line */}
-                {i < steps.length - 1 && (
-                  <motion.div
-                    className="how-connector"
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.15 + 0.4, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  />
-                )}
-
                 <div className="how-step-card glass-card">
-                  {/* Number */}
-                  <div className="how-num">{step.num}</div>
-
-                  {/* Icon bubble */}
-                  <div className="how-icon">
-                    <StepIcon size={24} strokeWidth={1.5} />
+                  <div className="how-step-top">
+                    <div className="how-icon">
+                      <StepIcon size={22} strokeWidth={1.5} />
+                      <div className="how-num">{step.num}</div>
+                    </div>
+                    <h3 className="how-step-title">{step.title}</h3>
                   </div>
-
-                <h3 className="how-step-title">{step.title}</h3>
-                <p className="how-step-desc">{step.desc}</p>
-
-                <div className="how-detail">
-                  <span className="how-detail-dot" />
-                  {step.detail}
+                  <p className="how-step-desc">{step.desc}</p>
+                  <div className="how-detail">
+                    <span className="how-detail-dot" />
+                    {step.detail}
+                  </div>
                 </div>
-              </div>
             </motion.div>
           )})}
         </div>
@@ -112,8 +98,8 @@ const HowItWorks = () => {
 
         .how-steps {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 20px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
           position: relative;
         }
 
@@ -121,51 +107,56 @@ const HowItWorks = () => {
           position: relative;
         }
 
-        .how-connector {
-          position: absolute;
-          top: 56px;
-          right: -10px;
-          width: calc(100% - 80px);
-          height: 1px;
-          background: linear-gradient(90deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
-          transform-origin: left;
-          z-index: 2;
-          pointer-events: none;
-        }
-
         .how-step-card {
-          padding: 28px 24px;
+          padding: 28px;
           height: 100%;
           display: flex;
           flex-direction: column;
-          gap: 14px;
+          gap: 16px;
           position: relative;
           z-index: 1;
         }
 
-        .how-num {
-          font-family: 'Space Grotesk', sans-serif;
-          font-size: 0.7rem;
-          font-weight: 700;
-          color: rgba(255,255,255,0.2);
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
+        .how-step-top {
+          display: flex;
+          align-items: center;
+          gap: 16px;
         }
 
         .how-icon {
-          font-size: 2.2rem;
-          width: 56px;
-          height: 56px;
+          position: relative;
+          width: 48px;
+          height: 48px;
+          display: flex;
+          flex-shrink: 0;
+          align-items: center;
+          justify-content: center;
+          background: rgba(255,255,255,0.06);
+          border: 1px solid rgba(255,255,255,0.1);
+          border-radius: 14px;
+          color: rgba(255,255,255,0.8);
+        }
+
+        .how-num {
+          position: absolute;
+          top: -6px;
+          right: -6px;
+          font-family: 'Space Grotesk', sans-serif;
+          font-size: 0.55rem;
+          font-weight: 700;
+          color: rgba(255,255,255,0.7);
+          background: rgba(255,255,255,0.1);
+          border: 1px solid rgba(255,255,255,0.15);
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          background: rgba(255,255,255,0.05);
-          border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 16px;
         }
 
         .how-step-title {
-          font-size: 1rem;
+          font-size: 1.05rem;
           font-weight: 700;
           color: white;
           letter-spacing: -0.02em;
@@ -187,7 +178,7 @@ const HowItWorks = () => {
           font-size: 0.75rem;
           color: rgba(255,255,255,0.35);
           font-weight: 500;
-          padding-top: 4px;
+          padding-top: 8px;
           border-top: 1px solid rgba(255,255,255,0.06);
         }
         .how-detail-dot {
@@ -198,11 +189,7 @@ const HowItWorks = () => {
           flex-shrink: 0;
         }
 
-        @media (max-width: 900px) {
-          .how-steps { grid-template-columns: repeat(2, 1fr); }
-          .how-connector { display: none; }
-        }
-        @media (max-width: 580px) {
+        @media (max-width: 768px) {
           .how-steps { grid-template-columns: 1fr; }
         }
       `}</style>

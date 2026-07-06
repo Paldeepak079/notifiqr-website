@@ -1,14 +1,13 @@
 import { useState, useEffect, useCallback } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Bell } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.notifiqr'
 
 const navLinks = [
   { label: 'Features', sectionId: 'features' },
   { label: 'Screenshots', sectionId: 'screenshots' },
-  { label: 'Pricing', sectionId: 'pricing' },
   { label: 'FAQ', sectionId: 'faq' },
   { label: 'Contact', sectionId: 'contact' },
 ]
@@ -68,9 +67,7 @@ const Navbar = () => {
         <div className="navbar-inner">
           {/* Logo */}
           <Link to="/" className="navbar-logo">
-            <div className="navbar-logo-icon">
-              <Bell size={18} strokeWidth={2.5} />
-            </div>
+            <img src="/app_logo.png" alt="Notifiqr" className="navbar-logo-img" />
             <span className="navbar-logo-text">Notifiqr</span>
           </Link>
 
@@ -188,18 +185,11 @@ const Navbar = () => {
           text-decoration: none;
           flex-shrink: 0;
         }
-        .navbar-logo-icon {
-          width: 36px;
-          height: 36px;
+        .navbar-logo-img {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
           border-radius: 10px;
-          background: rgba(255,255,255,0.1);
-          border: 1px solid rgba(255,255,255,0.2);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
         }
         .navbar-logo-text {
           font-family: 'Space Grotesk', sans-serif;

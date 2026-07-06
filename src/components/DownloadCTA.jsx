@@ -1,9 +1,6 @@
 import { motion } from 'framer-motion'
-import { Star } from 'lucide-react'
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.notifiqr'
-
-
 
 const DownloadCTA = () => {
   return (
@@ -26,24 +23,14 @@ const DownloadCTA = () => {
           <div className="download-inner">
             {/* Left content */}
             <div className="download-text">
-              <div className="section-label" style={{ marginBottom: '24px' }}>📥 Download Now</div>
+              <div className="section-label" style={{ marginBottom: '24px' }}>Download Now</div>
               <h2 className="download-title">
                 Ready to take back<br />control of your day?
               </h2>
               <p className="download-desc">
-                Join 10,000+ users who've already silenced the noise.
-                Free to download. Premium plans starting at ₹69/month.
+                Take back control of your notifications.
+                Free to download. No account required.
               </p>
-
-              {/* Rating bar */}
-              <div className="download-rating">
-                <div className="download-stars">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={16} fill="white" color="white" />
-                  ))}
-                </div>
-                <span>4.9 rating · 10,000+ downloads</span>
-              </div>
 
               {/* Play Store Button */}
               <a
@@ -63,7 +50,7 @@ const DownloadCTA = () => {
 
               {/* Mini badges */}
               <div className="download-badges">
-                {['Android 12+', 'No account needed', 'Free tier forever'].map((b) => (
+                {['Android 12+', 'No account needed', '100% On-Device'].map((b) => (
                   <span key={b} className="download-badge glass-badge">{b}</span>
                 ))}
               </div>

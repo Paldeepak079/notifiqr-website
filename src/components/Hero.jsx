@@ -187,7 +187,7 @@ const Hero = () => {
                   <Star key={i} size={14} fill="white" color="white" />
                 ))}
               </div>
-              <span className="hero-rating-text">4.9 · 10,000+ users</span>
+              <span className="hero-rating-text">100% on-device · No data leaves your phone</span>
             </motion.div>
 
             {/* CTAs */}

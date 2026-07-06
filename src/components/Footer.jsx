@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { Bell, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.notifiqr'
 
@@ -37,9 +37,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="footer-brand">
             <Link to="/" className="footer-logo">
-              <div className="footer-logo-icon">
-                <Bell size={16} strokeWidth={2.5} />
-              </div>
+              <img src="/app_logo.png" alt="Notifiqr" className="footer-logo-img" />
               <span className="footer-logo-text">Notifiqr</span>
             </Link>
             <p className="footer-tagline">
@@ -175,16 +173,11 @@ const Footer = () => {
           text-decoration: none;
           width: fit-content;
         }
-        .footer-logo-icon {
-          width: 32px;
-          height: 32px;
+        .footer-logo-img {
+          width: 36px;
+          height: 36px;
+          object-fit: contain;
           border-radius: 9px;
-          background: rgba(255,255,255,0.08);
-          border: 1px solid rgba(255,255,255,0.15);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
         }
         .footer-logo-text {
           font-family: 'Space Grotesk', sans-serif;

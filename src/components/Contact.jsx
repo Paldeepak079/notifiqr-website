@@ -30,7 +30,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="section-label">✉️ Contact</div>
+          <div className="section-label">Contact</div>
           <h2>Get in touch</h2>
           <p>Have a question, bug report, or partnership inquiry? We'd love to hear from you.</p>
         </motion.div>

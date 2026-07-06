@@ -106,7 +106,7 @@ const FAQ = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="section-label">❓ FAQ</div>
+          <div className="section-label">FAQ</div>
           <h2>Frequently asked questions</h2>
           <p>Everything you need to know about Notifiqr's privacy, pricing, and features.</p>
         </motion.div>
