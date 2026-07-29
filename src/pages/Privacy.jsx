@@ -43,9 +43,9 @@ const Privacy = () => {
                   The on-device AI classifier runs using only your phone's processor and memory. This is the default behavior and cannot be overridden without your explicit consent.
                 </p>
 
-                <h3>🔒 100% Serverless & Offline</h3>
+                <h3>🔒 Privacy-First by Design</h3>
                 <p>
-                  Notifiqr is designed to be a strictly offline, serverless application. We do not run or maintain any cloud databases or synchronization servers. All your notification history, action items, smart folder configurations, and custom preferences remain stored entirely and securely on your local device.
+                  Notifiqr processes all notification data entirely on your device. Your notification history, action items, smart folder configurations, and custom preferences remain stored securely on your local device. The only server interaction is for optional premium payment processing — no notification data ever leaves your phone.
                 </p>
 
                 <h3>🚫 No Third-Party Sharing</h3>
@@ -68,9 +68,9 @@ const Privacy = () => {
                   <li>User preferences and settings</li>
                 </ul>
 
-                <h3>Analytics Data (Anonymous)</h3>
+                <h3>Analytics & Crash Data (Anonymous)</h3>
                 <p>
-                  We use Firebase Analytics to collect anonymized, aggregated usage statistics such as feature usage rates and crash reports. This data cannot be linked to individual users or their notification content.
+                  We use Sentry for error tracking and crash reporting. This collects anonymized diagnostic data such as device model, OS version, and crash stack traces — no notification content is ever included. Firebase Analytics and Crashlytics libraries remain bundled for legacy compatibility but are not actively used.
                 </p>
               </section>
 
@@ -103,10 +103,10 @@ const Privacy = () => {
                 <h2>5. Third-Party Services</h2>
                 <p>Notifiqr uses the following third-party services, each with their own privacy policies:</p>
                 <ul>
-                  <li><strong>Firebase Analytics</strong> (Google) — anonymous usage analytics</li>
-                  <li><strong>Firebase Crashlytics</strong> (Google) — crash reporting</li>
                   <li><strong>Google Play Billing</strong> — in-app purchases and subscription management</li>
+                  <li><strong>Razorpay</strong> — payment processing for regions where Google Play Billing is not available</li>
                   <li><strong>Sentry</strong> — error tracking (no notification content is included in error reports)</li>
+                  <li><strong>Supabase</strong> — server-side payment verification (no notification data stored)</li>
                 </ul>
               </section>
 

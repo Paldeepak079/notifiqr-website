@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: 'What does the "Privacy-First" design actually mean?',
-    a: 'It means the app was architectured from day one to never need a server. Unlike competing apps that send your notifications to their cloud for AI processing, Notifiqr runs a local on-device classifier. All filtering, ranking, and storage happen completely offline on your device, ensuring maximum privacy.',
+    a: 'Your notification data stays on your device at all times. Unlike competing apps that send your notifications to their cloud for AI processing, Notifiqr runs a local on-device classifier. All filtering, ranking, and storage happen completely offline on your phone. The only server interaction is for optional payment processing — your private notification data never leaves your device.',
   },
   {
     q: 'How is the AI classification different from Android\'s built-in priority?',
