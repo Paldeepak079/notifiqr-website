@@ -39,8 +39,8 @@ const features = [
   {
     icon: Bell,
     title: 'Home Screen Widget',
-    desc: 'AI-scored widget shows your most important notifications ranked by urgency, with smart fallback content when things are quiet.',
-    badge: 'Widget',
+    desc: 'Live Update Me summary right on your home screen — resizable, always current, and free for everyone.',
+    badge: 'Free for all',
   },
   {
     icon: Trash2,

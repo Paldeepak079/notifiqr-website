@@ -180,7 +180,7 @@ const Pricing = () => {
         >
           <span>🆓</span>
           <p>
-            <strong>Free tier available!</strong> Core filtering, basic folders, 30-notification history, and 5 monitored apps —
+            <strong>Free tier available!</strong> Core filtering, basic folders, 30-notification history, 5 monitored apps, and the home screen widget —
             completely free, forever. No account required.
           </p>
         </motion.div>
